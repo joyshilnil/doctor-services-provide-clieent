@@ -8,12 +8,24 @@ import logo from '../../assets/logo.png'
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 
 const Header = () => {
-    const {user} = useContext(AuthContext);
+    const {user, logOut} = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+        .then( () => {
+          alert('Logout Succesfull');
+        })
+        .catch(error => console.error(error))
+      }
+    
   const menuItems = (
     <Nav>
         <Link className="text-decoration-none text-black" to="/">Home</Link>  
+        <Link className="text-decoration-none text-black" to="/blog">Blog</Link>  
       {user?.email ? (
-            <Link className="text-decoration-none text-black" to="/services">Services</Link>
+        <>
+        <Link className="text-decoration-none text-black" to="/services">Services</Link>
+        <button onClick={handleLogOut}  className="btn btn-danger">LogOut</button>
+        </>
       ) : (
         <Link to='/login' className="text-decoration-none text-black">Login</Link>
       )}

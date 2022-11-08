@@ -6,9 +6,10 @@ import Header from '../Shared/Header/Header';
 const Main = () => {
     return (
         <div>
-            <Header></Header>
-                <Outlet></Outlet>
+            <Header></Header>            
+            <Outlet></Outlet>
             <Footer></Footer>
+                
         </div>
     );
 };

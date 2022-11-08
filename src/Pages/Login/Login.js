@@ -32,7 +32,7 @@ const Login = () => {
                     <label className="label">
                         <span className="label-text">Password:-</span>
                     </label>
-                    <input type="text" name='password' placeholder="Password" className="input input-bordered w-100 p-2 mt-2 rounded mb-2" required />
+                    <input type="password" name='password' placeholder="Password" className="input input-bordered w-100 p-2 mt-2 rounded mb-2" required />
                     </div>
                     <div className="mt-6">
                         <input className="btn btn-primary" type="submit" value="Login" />
