@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 const SignUp = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -42,6 +43,7 @@ const SignUp = () => {
     .catch(error => console.error(error));
 }
 
+useTitle('Register')
 
   return (
     <div className="hero py-10 w-50 m-auto mt-5 shadow">

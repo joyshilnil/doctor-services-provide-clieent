@@ -1,8 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const SingleServiceDetails = () => {
     const {name, price, rating, image, body} = useLoaderData();
+    useTitle('Service Details')
     return (
         <div className='container mt-4'>
             <div className="row">

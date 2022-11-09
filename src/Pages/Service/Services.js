@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import useTitle from "../../hooks/useTitle";
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {
@@ -9,6 +10,10 @@ const Services = () => {
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);
+
+  useTitle('Services')
+
+
 
   console.log(services);
   return (

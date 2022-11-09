@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 const Login = () => {
   const { login, providerLogin, setLoading } = useContext(AuthContext);
   const [error, setError] = useState("");
@@ -47,6 +48,8 @@ const Login = () => {
         setLoading(false);
       });
   };
+
+  useTitle('Login')
   return (
     <div className="hero py-10 w-50 m-auto mt-5 shadow">
       <div className="hero-content flex-col lg:flex-row">

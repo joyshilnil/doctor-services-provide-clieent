@@ -1,7 +1,9 @@
 
 import React from "react";
 import Card from "react-bootstrap/Card";
+import useTitle from "../../../hooks/useTitle";
 const Blog = () => {
+  useTitle('Blog')
   return (
     <div className="container">
       <div className="section-title text-center py-3">

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
+  
   const { _id, name, price, image, rating, body } = service;
   return (
     <div className="col-lg-4 mb-3">
