@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LimitServiceCard = ({ service }) => {
-  const { name, price, image, rating, body } = service;
+  const { _id, name, price, image, rating, body } = service;
   console.log(service);
   return (
     <div className="col-lg-4 mb-4">
@@ -15,7 +16,10 @@ const LimitServiceCard = ({ service }) => {
           <h6> Price ${price}</h6>
           <h6>Rating{rating}</h6>
 
-          <button className="btn btn-success mt-3">View Details</button>
+          
+          <Link to={`/services/${_id}`}>
+            <button className="btn btn-success mt-3">View Details</button>
+          </Link>
         </div>
       </div>
     </div>
