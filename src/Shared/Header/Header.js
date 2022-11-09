@@ -18,16 +18,17 @@ const Header = () => {
       }
     
   const menuItems = (
-    <Nav>
-        <Link className="text-decoration-none text-black" to="/">Home</Link>  
-        <Link className="text-decoration-none text-black" to="/blog">Blog</Link>  
+    <Nav className='align-items-center'>
+        <Link className="text-decoration-none text-black me-3" to="/">Home</Link>  
+        <Link className="text-decoration-none text-black me-3" to="/blog">Blog</Link>          
+        <Link className="text-decoration-none text-black me-3" to="/services">Services</Link>         
+        <Link className="text-decoration-none text-black me-3" to="/addservices">Add Service</Link>       
       {user?.email ? (
-        <>
-        <Link className="text-decoration-none text-black" to="/services">Services</Link>
-        <button onClick={handleLogOut}  className="btn btn-danger">LogOut</button>
+        <>        
+        <button onClick={handleLogOut}  className="btn btn-danger me-3">LogOut</button>
         </>
       ) : (
-        <Link to='/login' className="text-decoration-none text-black">Login</Link>
+        <Link to='/login' className="text-decoration-none text-black btn btn-primary me-3 text-white">Login</Link>
       )}
     </Nav>
   );
@@ -41,6 +42,8 @@ const Header = () => {
             </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            </Nav>
             {menuItems}
           </Navbar.Collapse>
         </Container>

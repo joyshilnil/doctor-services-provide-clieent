@@ -19,7 +19,7 @@ const Choise = () => {
         </p>
       </div>
       <div className="row">
-        <div className="col-lg-4 text-center  py-4 px-5 rounded mb-2">
+        <div className="col-lg-4 text-center  py-2 px-5 rounded mb-2">
           <div className="icon fs-1 text-primary">
             <FaCar />
           </div>
@@ -31,7 +31,7 @@ const Choise = () => {
             </p>
           </div>
         </div>
-        <div className="col-lg-4 text-center  py-4 px-5 rounded mb-2">
+        <div className="col-lg-4 text-center  py-2 px-5 rounded mb-2">
           <div className="icon fs-1 text-primary">
             <FaStethoscope />
           </div>
@@ -43,7 +43,7 @@ const Choise = () => {
             </p>
           </div>
         </div>
-        <div className="col-lg-4 text-center  py-4 px-5 rounded mb-2">
+        <div className="col-lg-4 text-center  py-2 px-5 rounded mb-2">
           <div className="icon fs-1 text-primary">
             <FaBriefcaseMedical />
           </div>
@@ -56,7 +56,7 @@ const Choise = () => {
           </div>
         </div>
 
-        <div className="col-lg-4 text-center  py-4 px-5 rounded mb-2">
+        <div className="col-lg-4 text-center  py-2 px-5 rounded mb-2">
           <div className="icon fs-1 text-primary">
             <FaThermometerThreeQuarters />
           </div>
@@ -68,7 +68,7 @@ const Choise = () => {
             </p>
           </div>
         </div>
-        <div className="col-lg-4 text-center  py-4 px-5 rounded mb-2">
+        <div className="col-lg-4 text-center  py-2 px-5 rounded mb-2">
           <div className="icon fs-1 text-primary">
             <FaStrikethrough />
           </div>
@@ -80,7 +80,7 @@ const Choise = () => {
             </p>
           </div>
         </div>
-        <div className="col-lg-4 text-center  py-4 px-5 rounded mb-2">
+        <div className="col-lg-4 text-center  py-2 px-5 rounded mb-2">
           <div className="icon fs-1 text-primary">
             <FaVenusDouble />
           </div>
