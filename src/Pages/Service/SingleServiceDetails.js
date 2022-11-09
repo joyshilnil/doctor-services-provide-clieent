@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
+import SingleReview from '../MyReview/SingleReview';
 
 const SingleServiceDetails = () => {
     const {name, price, rating, image, body} = useLoaderData();
@@ -19,7 +20,7 @@ const SingleServiceDetails = () => {
 
                 </div>
                 <div className="col-lg-4">
-                    <h1>reviews</h1>
+                    <SingleReview></SingleReview>
                 </div>
             </div>
 
