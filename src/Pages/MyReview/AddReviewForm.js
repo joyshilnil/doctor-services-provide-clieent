@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 
 const AddReviewForm = () => {
-  const { _id, name, price } = useLoaderData();
+  const { _id } = useLoaderData();
   const { user } = useContext(AuthContext);
   console.log(user);
 
@@ -28,8 +28,7 @@ const AddReviewForm = () => {
     fetch("http://localhost:4000/reviews", {
       method: "POST",
       headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("genius-token")}`,
+        "content-type": "application/json"       
       },
       body: JSON.stringify(review),
     })
@@ -46,9 +45,6 @@ const AddReviewForm = () => {
 
   return (
     <div className="container">
-      <h2>{user?.email}</h2>
-      <h5>{name}</h5>
-      <p>{price}</p>
 
       <div className="hero py-10 w-50 m-auto mt-5 shadow">
         <div className="hero-content flex-col lg:flex-row">

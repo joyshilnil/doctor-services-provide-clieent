@@ -4,8 +4,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 const AddReview = () => {
     const {_id} = useLoaderData();
     return (
-        <div className='shadow p-2 rounded'>          
-
+        <div className='shadow p-2 rounded'>    
 
             <Link to={`/addreviewform/${_id}`}>
                 <button className='btn btn-primary'>Add Review</button>
