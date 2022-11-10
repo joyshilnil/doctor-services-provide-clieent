@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 
 const AddReviewForm = () => {
   const { _id } = useLoaderData();
   const { user } = useContext(AuthContext);
-  console.log(user);
+  const navigate = useNavigate();
+  // console.log(user);
 
   const handleAddReview = (event) => {
     event.preventDefault();
@@ -28,7 +29,7 @@ const AddReviewForm = () => {
     fetch("http://localhost:4000/reviews", {
       method: "POST",
       headers: {
-        "content-type": "application/json"       
+        "content-type": "application/json",
       },
       body: JSON.stringify(review),
     })
@@ -38,14 +39,16 @@ const AddReviewForm = () => {
         if (data.acknowledged) {
           alert("Review added successfully");
           form.reset();
+          navigate(`/services/${_id}`);
+
         }
       })
       .catch((er) => console.error(er));
+
   };
 
   return (
     <div className="container">
-
       <div className="hero py-10 w-50 m-auto mt-5 shadow">
         <div className="hero-content flex-col lg:flex-row">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl p-4">

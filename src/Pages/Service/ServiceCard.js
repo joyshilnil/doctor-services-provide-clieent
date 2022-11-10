@@ -40,7 +40,7 @@ const ServiceCard = ({ service }) => {
           <h3 className="text-primary">{name}</h3>
           <p>{body.slice(0, 100) + "....."}</p>
           <h6> Price ${price}</h6>
-          <h6>Rating{rating}</h6>
+          <h6>Rating {rating}</h6>
 
           <Link to={`/services/${_id}`}>
             <button className="btn btn-success mt-3">View Details</button>

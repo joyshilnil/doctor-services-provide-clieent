@@ -8,6 +8,7 @@ import AddReview from "../../Pages/MyReview/AddReview";
 import AddReviewForm from "../../Pages/MyReview/AddReviewForm";
 import EditReview from "../../Pages/MyReview/EditReview";
 import MyReview from "../../Pages/MyReview/MyReview";
+import ShowReview from "../../Pages/MyReview/ShowReview";
 import Register from "../../Pages/Register/Register";
 import Services from "../../Pages/Service/Services";
 import SingleServiceDetails from "../../Pages/Service/SingleServiceDetails";
@@ -32,23 +33,35 @@ const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <Services></Services>
+        element: <Services></Services>,
       },
       {
         path: "/blog",
-        element: <Blog></Blog>
+        element: <Blog></Blog>,
       },
       {
         path: "/addservices",
-        element: <PrivateRoute><AddService></AddService></PrivateRoute>
+        element: (
+          <PrivateRoute>
+            <AddService></AddService>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/addreview",
-        element: <PrivateRoute><AddReview></AddReview></PrivateRoute>
+        element: (
+          <PrivateRoute>
+            <AddReview></AddReview>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/myreview",
-        element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
+        element: (
+          <PrivateRoute>
+            <MyReview></MyReview>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/reviews/edit/:id",
@@ -56,15 +69,20 @@ const router = createBrowserRouter([
       },
       {
         path: "/addreviewform/:id",
-        element: <PrivateRoute><AddReviewForm></AddReviewForm></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <AddReviewForm></AddReviewForm>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-        fetch(`http://localhost:4000/services/${params.id}`),
+          fetch(`http://localhost:4000/services/${params.id}`),
       },
+
       {
         path: "/services/:id",
         element: <SingleServiceDetails></SingleServiceDetails>,
         loader: ({ params }) =>
-          fetch(`https://doctor-server-seven.vercel.app/services/${params.id}`),
+          fetch(`http://localhost:4000/services/${params.id}`),
       },
     ],
   },

@@ -6,7 +6,7 @@ const Services = () => {
   const [services, setService] = useState([]);
 
   useEffect(() => {
-    fetch("https://doctor-server-seven.vercel.app/services")
+    fetch("http://localhost:4000/services")
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);
@@ -15,7 +15,7 @@ const Services = () => {
 
 
 
-  console.log(services);
+  // console.log(services);
   return (
     <div className="container">
       <div className="section-title text-center py-5">
