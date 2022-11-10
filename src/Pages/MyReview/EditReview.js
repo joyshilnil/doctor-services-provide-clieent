@@ -10,7 +10,7 @@ const EditReview = () => {
   const { id } = router;
 
   useEffect(() => {
-    fetch(`http://localhost:4000/reviews/${id}`)
+    fetch(`https://doctor-server-seven.vercel.app/reviews/${id}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
@@ -30,7 +30,7 @@ const EditReview = () => {
       rating: e.target.rating.value,
     };
 
-    fetch(`http://localhost:4000/reviews/${id}`, {
+    fetch(`https://doctor-server-seven.vercel.app/reviews/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

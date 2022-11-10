@@ -8,7 +8,7 @@ const ShowReview = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/review?serviceId=${serviec?._id}`)
+    fetch(`https://doctor-server-seven.vercel.app/review?serviceId=${serviec?._id}`)
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, [serviec?._id]);

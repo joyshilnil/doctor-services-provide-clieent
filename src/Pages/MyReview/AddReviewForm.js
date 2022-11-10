@@ -26,7 +26,7 @@ const AddReviewForm = () => {
       message,
     };
 
-    fetch("http://localhost:4000/reviews", {
+    fetch("https://doctor-server-seven.vercel.app/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
