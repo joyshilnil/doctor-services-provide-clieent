@@ -11,7 +11,7 @@ const Banner = () => {
       <Carousel.Item>
         <img className="d-block w-100 h-100" src={slide1} alt="First slide" />
         <Carousel.Caption>
-          <h1 style={{ fontSize: "90px" }} className="text-black fw-bolder">
+          <h1 className="text-black fw-bolder">
             Friendly Gentle Dentist
           </h1>
           <p className="text-black">
@@ -24,7 +24,7 @@ const Banner = () => {
         <img className="d-block w-100" src={slide2} alt="Second slide" />
 
         <Carousel.Caption>
-          <h1 style={{ fontSize: "90px" }} className="text-black fw-bolder">
+          <h1 className="text-black fw-bolder">
             Friendly Gentle Dentist
           </h1>
           <p className="text-black">
@@ -37,7 +37,7 @@ const Banner = () => {
         <img className="d-block w-100" src={slide3} alt="Third slide" />
 
         <Carousel.Caption>
-          <h1 style={{ fontSize: "90px" }} className="text-black fw-bolder">
+          <h1 className="text-black fw-bolder">
             Friendly Gentle Dentist
           </h1>
           <p className="text-black">

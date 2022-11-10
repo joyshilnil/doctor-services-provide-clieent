@@ -69,7 +69,7 @@ useTitle('Register')
               </label>
               <input
                 type="text"
-                name="photoUrl"
+                name="photoURL"
                 placeholder="Photo URL"
                 className="input input-bordered w-100 p-2 mt-2 rounded mb-2"
                 required

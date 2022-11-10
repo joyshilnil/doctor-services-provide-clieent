@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
+import AddReview from '../MyReview/AddReview';
 
 const SingleServiceDetails = () => {
     const {name, price, rating, image, body} = useLoaderData();
@@ -8,7 +9,7 @@ const SingleServiceDetails = () => {
     return (
         <div className='container mt-4'>
             <div className="row">
-                <div className="col-lg-8 shadow p-4 rounded">
+                <div className="col-lg-8 shadow p-4 rounded mb-3">
                 <img src={image} className="img-fluid" alt=""/>
                 <h1 className='text-primary'>Service Name:- {name}</h1>
                 <div className="rating">
@@ -19,7 +20,7 @@ const SingleServiceDetails = () => {
 
                 </div>
                 <div className="col-lg-4">
-                    <h1>Review</h1>
+                    <AddReview></AddReview>
                 </div>
             </div>
 
