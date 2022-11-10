@@ -14,6 +14,7 @@ const SingleReview = ({ review, handleDelete }) => {
   return (
     <div className="col-lg-4 shadow p-4 text-center rounded mb-3">
       <img src={photoURL} className="user-image" title="" alt="" />
+      
       <p className="m-0">"{message}"</p>
       <h3 className="text-primary">{displayName}</h3>
       <small className="font-cond case-u lts-sm fs-80 fg-text-l">
