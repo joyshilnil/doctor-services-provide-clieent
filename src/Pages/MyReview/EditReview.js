@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 const EditReview = () => {
   const router = useParams();
@@ -48,7 +49,7 @@ const EditReview = () => {
       })
       .catch((err) => console.error(err.message));
   };
-
+  useTitle("Update Review");
   return (
     <div className="container">
       <div className="hero py-10 w-50 m-auto mt-5 shadow">

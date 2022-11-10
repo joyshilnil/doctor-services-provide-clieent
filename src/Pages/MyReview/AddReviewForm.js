@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 const AddReviewForm = () => {
   const { _id } = useLoaderData();
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   // console.log(user);
-
+  useTitle("Add Review");
   const handleAddReview = (event) => {
     event.preventDefault();
     const form = event.target;

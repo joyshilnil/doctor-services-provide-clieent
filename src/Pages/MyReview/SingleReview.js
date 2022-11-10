@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 import "./SingleRevoew.css";
 
 const SingleReview = ({ review, handleDelete }) => {
@@ -9,6 +10,7 @@ const SingleReview = ({ review, handleDelete }) => {
     navigate(`/reviews/edit/${id}`);
   };
 
+  useTitle("My Review");
   return (
     <div className="col-lg-4 shadow p-4 text-center rounded mb-3">
       <img src={photoURL} className="user-image" title="" alt="" />

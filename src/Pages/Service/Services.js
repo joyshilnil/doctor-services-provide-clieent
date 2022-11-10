@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import useTitle from "../../hooks/useTitle";
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {
   const [services, setService] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://doctor-server-seven.vercel.app/services")
       .then((res) => res.json())
-      .then((data) => setService(data));
+      .then((data) => {
+        setService(data);
+        setLoading(false);
+      });
   }, []);
 
-  useTitle('Services')
-
-
+  useTitle("Services");
 
   // console.log(services);
   return (
@@ -26,11 +29,19 @@ const Services = () => {
           cupidatat skateboard dolor brunch.
         </p>
       </div>
-      <div className="row">
-        {services.map((service) => (
-          <ServiceCard key={service._id} service={service}></ServiceCard>
-        ))}
-      </div>
+      {loading ? (
+        <>
+          <Spinner animation="border" variant="primary" />
+        </>
+      ) : (
+        <>
+          <div className="row">
+            {services.map((service) => (
+              <ServiceCard key={service._id} service={service}></ServiceCard>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };
